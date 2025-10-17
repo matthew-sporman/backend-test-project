@@ -60,34 +60,30 @@ Ensure to follow the guidelines below for packaging and submitting your project 
 
 ## Project Packaging:
 
-### 1. Folder Structure:
-
-- Place your project in a **new folder** separate from this provided one.
-
-### 2. Exclude `node_modules`:
+### 1. Exclude `node_modules`:
 
 - Do **not** include the `node_modules` directory.
 - Ensure your `package.json` is accurate for dependency installation via `npm install`.
 
-### 3. Zipping the Project:
+### 2. Zipping the Project:
 
 - Compress the project folder into a `.zip` file, excluding `node_modules`.
 
 ## Online Hosting for Download:
 
-### 4. Cloud Storage:
+### 3. Cloud Storage:
 
 - Upload the `.zip` file to a cloud storage platform (Google Drive, Dropbox, etc.).
 
-### 5. Accessible Link:
+### 4. Accessible Link:
 
 - Generate and test a public link for downloading the zipped project file.
 
 ## Submission Process:
 
-### 6. Email Submission:
+### 5. Email Submission:
 
-- Send the download link via email to the designated submission address and include any necessary details.
+- Send the download link via email to the designated submission address and include any necessary details for running your project, known bugs, and features you did not have time to build (if any). 
 
 ## Additional Notes:
 
