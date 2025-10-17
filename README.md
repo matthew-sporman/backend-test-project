@@ -25,11 +25,26 @@ The **24G Drive Backend Practical Test** is a technical evaluation designed to a
   - Delete the user using the provided `id`.
   - Use a 204 status code for successful deletion and 404 if the user doesn’t exist.
 
-### 3. Validation & Testing:
+### 3. Analytics Requirement
+
+- **User Report**
+  - Write a script in Typescript that generates a CSV file with the following columns, one row for each user in the database. Order the data by users first and last name, alphabetically.
+    - `id`, `firstName`, `lastName`, `totalLogins` (count), `lastLogin` (datetime).
+   
+Example
+
+| id | firstName | lastName | totalLogins | lastLogin |
+|----|-----------|----------|-------------|-----------|
+| 2 | Elena | Rodriguez | 8 | 2025-10-15T18:12:33Z |
+| 3 | Marcus | Johnson | 132 | 2025-10-16T14:45:02Z |
+| 1 | Sarah | Chen | 47 | 2025-10-17T09:23:15Z |
+
+### 4. Validation & Testing:
 
 - Ensure data is persisted using MySQL.
 - Validate API input/output through test requests.
 - Utilize the provided script (`npm run test http://localhost:3000`) for testing before submission. Change the port if different.
+- Report script should be executable via `npx ts-node ./generate-user-report.ts` or similar and output the report as a CSV file in the current directory the command is being executed from. 
 
 ## Key Considerations:
 
