@@ -8,7 +8,7 @@ The **24G Drive Backend Practical Test** is a technical evaluation designed to a
 
 - **Language:** TypeScript
 - **Database:** MySQL
-- **Packages:** You are free to use any npm packages you deem fit and appropriate for completing the test
+- **Packages:** Use what the 2772-1-lxp-base-api uses
 
 ### 2. API Route Requirements:
 
