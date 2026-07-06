@@ -1,17 +1,18 @@
 /*
-  Sequelize CLI entrypoint
-  We also import this file when we initialize the Sequelize connection for models in Express.
+  Sequelize CLI entrypoint. Adapted from lxp-base-api but simplified for local dev
+  (no AWS Secrets Manager, no replica DBs here).
 
-  This comment is stolen from the lxp-base-api project.
+  Exports a plain env-keyed object (config) instead of lxp's async function, since that's
+  what vanilla sequelize-cli expects (`require(configPath)[env]`). Values come
+  straight from `.env` via dotenv.
 
-  1. Run `npx sequelize-cli init` to create the config file.
-
+  Will also back the Express Sequelize connection once that's built in the next phase.
 */
 
-// When sequelize-cli is used, it will load .env into the environment (process.env).
+// see header comment: this loads .env directly and has no AWS secrets manager.
 require('dotenv').config();
 
-// Object to pull values
+// see header comment: object to pull values from .env
 const config = {
   username: process.env.SQL_USER,
   password: process.env.SQL_PASSWORD,
@@ -21,11 +22,7 @@ const config = {
   dialect: 'mysql',
 };
 
-// Export the config object for the Sequelize CLI.
-
-// Instead of exporting a function like lxp,
-// a plain object is exported to be compatible with
-// the Sequelize CLI.
+// see header comment: plain object here instead of lxp's async function, for vanilla sequelize-cli compatibility.
 module.exports = {
   development: config,
   test: config,

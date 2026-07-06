@@ -1,7 +1,10 @@
-// This is the Sequelize CLI configuration file.
+// Despite the "rc" naming convention, this is plain JS (not JSON)
+// and required directly by `npx sequelize-cli` commands. Excluded filename from 
+// lint-staged.config.js to avoid commit failures.
+
 module.exports = {
   config: './sequelize.config.js',
   'models-path': './dist/db/models',
   'migrations-path': './migrations',
   'seeders-path': './seeders',
-}
+};
