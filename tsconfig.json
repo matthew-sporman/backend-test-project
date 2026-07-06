@@ -5,7 +5,6 @@
 
     "module": "commonjs",
     "target": "esnext",
-    "types": [],
     // For nodejs:
     "lib": ["esnext"],
     "types": ["node"],

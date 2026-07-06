@@ -1,0 +1,7 @@
+// This is the Sequelize CLI configuration file.
+module.exports = {
+  config: './sequelize.config.js',
+  'models-path': './dist/db/models',
+  'migrations-path': './migrations',
+  'seeders-path': './seeders',
+}
